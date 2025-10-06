@@ -1,9 +1,9 @@
-object pepita {
-  var energy = 100
+class Corsa {
+  const color = ""
+  method capcidad() = 4
+  method velocidad() =  150
+  method peso() = 1300
+  method color() = color 
 
-  method energy() = energy
-
-  method fly(minutes) {
-    energy = energy - minutes * 3
-  }
 }
+

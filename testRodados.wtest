@@ -1,0 +1,58 @@
+import  rodados.*
+
+describe "un corsa" {
+
+  test "su capacidad" {
+    const corcita = new Corsa(color=rojo)
+    assert.equals(4, corcita.capacidad())
+  }
+  test "su velocidad" {
+    const corcita = new Corsa(color=rojo)
+    assert.equals(150, corcita.velocidad())
+    
+  }
+ test "su peso" {
+  const corcita = new Corsa(color=rojo)
+  assert.equals(1300, corcita.peso())
+  
+
+   
+ }
+
+}
+
+describe "un kwid" {
+    const quid = new Kwid(tanqueAdicional = true)
+    const quis = new Kwid(tanqueAdicional = false)
+
+  test "su capacidad" {
+   
+    assert.equals(3, quid.capacidad())
+    assert.equals(4, quis.capacidad())
+
+
+
+    
+  }
+  test "su peso" {
+    
+    assert.equals(1350, quid.peso())
+    assert.equals(1200, quis.peso())
+    
+  }
+
+
+}
+
+describe "traffic" {
+  test "su capoacidad con interior comodo " {
+    assert.equals(5, trafic.capacidad())
+    
+  }
+   test "su capoacidad con interior popular" {
+    trafic.cambiarInterior(popular)
+
+    assert.equals(12, trafic.capacidad())
+    
+  }
+}
