@@ -1,0 +1,11 @@
+import rodados.*
+
+describe "name" {
+  test "description" {
+    const deporte = new Dependencia =(empleados = 45)
+    const cultura = new Dependencia =(empleados = 45)
+    
+  }
+}
+
+

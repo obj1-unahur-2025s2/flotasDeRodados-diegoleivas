@@ -28,15 +28,26 @@ method color() = color
 }
 
 class Dependencia {
+    const rodados=[]
+    const empleados
 
-method agregar() {
+   method agregarAFlota(rodado) {
+        rodados.add(rodado)
+}
+ method quitarAFlota(rodado){
+    rodados.remove(rodado)
+ }
+ method pesoTotal()=rodados.sum({r=>r.peso()})
+ method estaBienEquipada() = rodados.size()>= 3 and rodados.all({r=>r.velocidad()>=100})
+ method capacidadTotalEnColor(color) = rodados.filter({r=>r.color()==color}).sum({r=>r.capacidad()}) 
+ method colorDeRodadoMasRapido()=rodados.max({r=>r.velocidad()}).color()
+ method capacidadTotal(){
+    return rodados.sum({r=>r.capacidad()})
+ }
+method capacidadFaltante() = empleados -self.capacidadTotal() 
   
 }
 
-
-
-  
-}
 
 
 object trafic {
